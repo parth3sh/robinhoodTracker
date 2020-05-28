@@ -1,5 +1,5 @@
 # Robinhood Tracker
-A tracker for investments made using the Robin Stocks library in Python to interact with the Robinhood API. 
+A tracker for investments made using the Robin Stocks library in Python to interact with the Robinhood API and update a google sheet using the Drive and Sheets apis.
 ## To use:
 * Share the included google sheets template with the client email (robin-561@portfolio-tracker-278523.iam.gserviceaccount.com)
 * Run the robin.py script
