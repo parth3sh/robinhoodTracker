@@ -19,7 +19,7 @@ def fillSheet(portDict,cash):
         n = n + 1
     sheet.update_cell(n+1,1, "CASH")
     sheet.update_cell(n+1,4, cash)
-    sheet.update_cell(n+1,2, "CASH")
+    sheet.update_cell(n+1,2, 4)
 
 
 def checkExists(stock):
