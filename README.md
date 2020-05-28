@@ -6,3 +6,6 @@ A tracker for investments made using the Robin Stocks library in Python to inter
  Markup : * Log in with your Robinhood account information, and answer any prompts
  Markup : * Enjoy tracking your portfolio within the Google Sheet with updated information directly from your Robinhood account
  Markup : * Make any adjustments to the Google Sheet to optimize data
+
+
+Markup : * Bullet list
