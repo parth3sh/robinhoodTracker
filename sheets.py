@@ -11,9 +11,22 @@ def fillSheet(portDict,cash):
     n = 2
     for stock in portDict:
         sheet.update_cell(n,1, stock)
-        sheet.update_cell(n,2, portDict.get(stock).get('equity'))
-        sheet.update_cell(n,3, portDict.get(stock).get('percentage'))
+        if (portDict.get(stock).get('risk') != "exists"):
+            sheet.update_cell(n,2,portDict.get(stock).get('risk'))
+        sheet.update_cell(n,3,portDict.get(stock).get('quantity'))
+        sheet.update_cell(n,4, portDict.get(stock).get('equity'))
+        sheet.update_cell(n,5, portDict.get(stock).get('percentage'))
         n = n + 1
-    sheet.update_cell(n,1, "CASH")
-    sheet.update_cell(n,2, cash)
+    sheet.update_cell(n+1,1, "CASH")
+    sheet.update_cell(n+1,4, cash)
+    sheet.update_cell(n+1,2, "CASH")
+
+
+def checkExists(stock):
+    exists = False
+    sheet = client.open("PORTFOLIO").sheet1
+    stocks = sheet.col_values(1)
+    if stock in stocks:
+        exists = True
+    return exists
 
